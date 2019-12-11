@@ -27,6 +27,6 @@ int main(){
 	std::cout<<"the retrived data is \t";
 	std::cout<<t->info;
 	std::cout<<"\n";
-	l.add(1,t);
+	l.add(1,l.retrive(9,t));
 	l.traverse();
 }

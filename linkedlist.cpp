@@ -59,7 +59,7 @@ bool list::search(int data){
 	return false;
 }
 
-bool list::retrive(int data,Node* outptr){
+Node* list::retrive(int data,Node* outptr){
 	if (isEmpty()) std::cout<<"list is  empty";
 	Node* temp= new Node;
 	temp=Head;
@@ -67,11 +67,11 @@ bool list::retrive(int data,Node* outptr){
 		temp=temp->next;
 	}
 	if (temp==NULL){
-		return  false; 
+		return  NULL; 
 	}
 	else{
 		*outptr=*temp;
-		return true;	
+		return temp;	
 	}			
 }
 void list::traverse(){
